@@ -11,7 +11,9 @@ const app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://sri:r1YWhlbFyFNkC6Eh@weshare.3leqq.mongodb.net/myFirstDatabase"
+    "mongodb+srv://sri:" +
+      process.env.MONGO_ATLAS_PW +
+      "@weshare.3leqq.mongodb.net/myFirstDatabase"
   )
   .then(() => {
     console.log("Connected to database!");
